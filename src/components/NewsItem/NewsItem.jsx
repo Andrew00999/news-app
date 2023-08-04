@@ -9,13 +9,11 @@ import {
 } from "@mui/material";
 
 import notFound from "../../images/not-found.png";
+import { Link } from "react-router-dom";
 
-const NewsItem = ({ newsData }) => {
+const NewsItem = ({ newsData, id }) => {
     return (
-        <Card
-            sx={{ maxWidth: 345, margin: "0 auto" }}
-            key={newsData.publishedAt}
-        >
+        <Card sx={{ margin: "0 auto" }} key={newsData.publishedAt}>
             {newsData.urlToImage ? (
                 <CardMedia
                     component="img"
@@ -43,9 +41,11 @@ const NewsItem = ({ newsData }) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" style={{ cursor: "pointer" }}>
-                    Read More
-                </Button>
+                <Link to={`/article/${id}`}>
+                    <Button variant="contained" size="small">
+                        Read More
+                    </Button>
+                </Link>
             </CardActions>
         </Card>
     );

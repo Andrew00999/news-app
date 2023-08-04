@@ -1,14 +1,10 @@
 import * as React from "react";
 import {
     AppBar,
-    Box,
     IconButton,
     Toolbar,
     Typography,
-    Button,
 } from "@mui/material";
-
-const navItems = ["About", "Contact"];
 
 const Header = () => {
     return (
@@ -29,13 +25,6 @@ const Header = () => {
                 >
                     News feed
                 </Typography>
-                <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                    {navItems.map((item) => (
-                        <Button key={item} sx={{ color: "#fff" }}>
-                            {item}
-                        </Button>
-                    ))}
-                </Box>
             </Toolbar>
         </AppBar>
     );
