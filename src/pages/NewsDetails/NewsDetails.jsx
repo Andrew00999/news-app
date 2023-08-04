@@ -61,7 +61,6 @@ const NewsDetails = () => {
                         <Link to={displayData?.url} target="_blank">
                             <Button
                                 variant="contained"
-                                onClick={() => navigate(-1)}
                             >
                                 Click to go to the original article
                                 <ChevronRight />
